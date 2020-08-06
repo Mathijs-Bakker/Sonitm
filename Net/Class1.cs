@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace social
+namespace Net
 {
     public class Class1
     {
