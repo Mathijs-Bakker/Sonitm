@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/MateoPanadero/Repositories/Sonitm/Net/Social/SocialLibrary/FriendsTests/FriendsTests.csproj",
+    "projectUniqueName": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/FriendsTests.csproj",
     "projectName": "FriendsTests",
-    "projectPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/Social/SocialLibrary/FriendsTests/FriendsTests.csproj",
-    "outputPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/Social/SocialLibrary/FriendsTests/obj/",
+    "projectPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/FriendsTests.csproj",
+    "outputPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -17,7 +17,11 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/Friends.csproj": {
+            "projectPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/Friends.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -29,9 +33,17 @@
   "frameworks": {
     "netcoreapp3.1": {
       "dependencies": {
+        "FluentAssertions": {
+          "target": "Package",
+          "version": "[6.0.0-alpha0001, )"
+        },
         "Microsoft.NET.Test.Sdk": {
           "target": "Package",
           "version": "[16.5.0, )"
+        },
+        "NSubstitute": {
+          "target": "Package",
+          "version": "[4.2.2, )"
         },
         "NUnit": {
           "target": "Package",
