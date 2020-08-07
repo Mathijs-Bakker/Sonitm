@@ -92,3 +92,11 @@
 /Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/obj/Debug/netcoreapp3.1/FriendsTests.csproj.CopyComplete
 /Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/obj/Debug/netcoreapp3.1/FriendsTests.dll
 /Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/obj/Debug/netcoreapp3.1/FriendsTests.pdb
+/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/bin/Debug/netcoreapp3.1/Castle.Core.dll
+/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/bin/Debug/netcoreapp3.1/FluentAssertions.dll
+/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/bin/Debug/netcoreapp3.1/NSubstitute.dll
+/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/bin/Debug/netcoreapp3.1/Friends.dll
+/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/bin/Debug/netcoreapp3.1/Friends.pdb
