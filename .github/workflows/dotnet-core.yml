@@ -1,5 +1,8 @@
 name: .NET Core
 
+env:
+  SLN_PATH: SocialLibrary.sln
+   
 on:
   push:
     branches: [ master ]
@@ -20,6 +23,6 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build SocialLibrary.sln --configuration Release --no-restore
+      run: dotnet build ${{ env.SLN_PATH }} --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
