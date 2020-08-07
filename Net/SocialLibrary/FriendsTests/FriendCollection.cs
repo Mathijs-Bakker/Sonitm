@@ -1,20 +1,25 @@
 using NUnit.Framework;
 using FluentAssertions;
 
-namespace FriendsTests
+namespace sutsTests
 {
     [TestFixture]
-    public class FriendCollection
+    public class sutCollection
     {
         [Test]
-        public void MyTest()
+        public void Sut_Is_TypeOf_sut()
         {
-            var expected = true;
-
-            //Assert.That(expected, Is.False);
-            expected.Should().BeFalse();
-
+            var sut = new Friend();
+            sut.Should().BeOfType<Friend>();
         }
         
+        [Test]
+        public void Test()
+        {
+            
+        }
     }
+
+    public struct Friend
+    {}
 }
