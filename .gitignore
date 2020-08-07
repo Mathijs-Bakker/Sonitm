@@ -1,5 +1,8 @@
 # General gitignore 
 
-#MacOS
+# JetBrains Rider 
+.idea/
+
+# MacOS
 .DS_Store
 
