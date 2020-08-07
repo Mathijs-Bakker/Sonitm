@@ -23,6 +23,7 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build ./Net/SocialLibrary/SocialLibrary.sln --configuration Release --no-restore
+      working-directory: ./Net/SocialLibrary
+      run: dotnet build --configuration Release --no-restore
     - name: Test
       run: dotnet test --no-restore --verbosity normal
