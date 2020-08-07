@@ -1,4 +1,4 @@
-name: .NET Core SocialLibrary
+name: SocialLibrary .NET Core
    
 on:
   push:
