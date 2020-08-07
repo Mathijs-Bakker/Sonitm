@@ -1,7 +1,4 @@
-name: .NET Core
-
-env:
-  SLN_PATH: SocialLibrary.sln
+name: .NET Core SocialLibrary
    
 on:
   push:
@@ -27,4 +24,5 @@ jobs:
       working-directory: ./Net/SocialLibrary
       run: dotnet build --configuration Release --no-restore
     - name: Test
+      working-directory: ./Net/SocialLibrary
       run: dotnet test --no-restore --verbosity normal
