@@ -31,51 +31,6 @@ namespace FriendsTests
         }
     }
     
-    [TestFixture]
-    public class FriendsTests
-    {
-        [Test]
-        public void Sut_Should_BeOfType_Friends()
-        {
-            var sut = new Friends();
-            sut.Should().BeOfType<Friends>();
-        }
-        
-        [Test]
-        public void tjjT()
-        {
-            var sut = new Friends();
-            sut.List.Should().BeOfType<List<Friend>>();
-        }         
-// When friend status changes on remote the List should be updated
-// Add a observable helper class on remote
-
-        [Test]
-        public void Update_Should_()
-        {
-            var sut = new Friends();
-            sut.List.Add(new Friend(0, "a"));
-            
-//             sut.Update();
-
-            
-            
-        }
-    }
-
-    [TestFixture]
-    public class RemoteHostTests
-    {
-        [Test]
-        public void Sut_Should_Have_an_Observable_Friends_Collection()
-        {
-           IRemoteHost sut = new RemoteHost();
-
-           //sut.Should().BeOfType<IRemoteHost>();
-           sut.FriendsList.Should().BeOfType<List<Friend>>();
-        }
-    }
-
     public class Friends
     {
         public IList<Friend> List = new List<Friend>();
@@ -89,6 +44,12 @@ namespace FriendsTests
 
     public class RemoteHost : IRemoteHost
     {
+        public RemoteHost()
+        {
+            FriendsList = list;
+        }
+        
+        private List<Friend> list = new List<Friend>();
         public List<Friend> FriendsList { get; private set; }
     }
 
