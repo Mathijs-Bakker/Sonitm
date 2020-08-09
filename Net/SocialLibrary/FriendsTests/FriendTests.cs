@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using FluentAssertions;
+using Social.Friends;
 
 namespace FriendsTests
 {
@@ -31,12 +32,6 @@ namespace FriendsTests
         }
     }
     
-    public class Friends
-    {
-        public IList<Friend> List = new List<Friend>();
-            
-    }
-
     public interface IRemoteHost
     {
         List<Friend> FriendsList { get; }
@@ -51,17 +46,5 @@ namespace FriendsTests
         
         private List<Friend> list = new List<Friend>();
         public List<Friend> FriendsList { get; private set; }
-    }
-
-    public struct Friend
-    {
-        public int Id { get; private set; }
-        public string Name { get; private set; }
-
-        public Friend (int id, string name)
-        {
-            Id = id;
-            Name = name;
-        }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using FluentAssertions;
+using Social.Friends;
 
 namespace FriendsTests
 {
