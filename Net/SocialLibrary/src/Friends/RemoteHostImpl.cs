@@ -1,10 +1,15 @@
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Social.Friends
 {
     public class RemoteHostImpl : RemoteHost
     {
-        public List<Friend> Friends { get; set; } 
+        public ObservableCollection<Friend> Friends { get; private set; }
+
+        public RemoteHostImpl()
+        {
+            Friends = new ObservableCollection<Friend>();
+        }
     }
 }
 

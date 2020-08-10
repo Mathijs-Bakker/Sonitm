@@ -1,18 +1,31 @@
-using System.Collections.Generic;
 using NUnit.Framework;
 using FluentAssertions;
 using Social.Friends;
+using System.Collections.ObjectModel;
 
 namespace FriendsTests
 {
     [TestFixture]
     public class RemoteHostImplTests
     {
-        [Test]
-        public void Sut_Should_Have_Friends_Collection()
+        RemoteHost _sut;
+
+        [SetUp]
+        public void SetUp()
         {
-            RemoteHost sut = new RemoteHostImpl();
-            sut.Friends.Count.Should().Be(1);
+            _sut = new RemoteHostImpl();
+        }
+
+        [Test]
+        public void Friends_Should_Count_0_When_Sut_Is_Instantiated()
+        {
+            _sut.Friends.Count.Should().Be(0);
+        }
+
+        [Test]
+        public void Friends_Should_Be_Observable()
+        {
+            _sut.Friends.Should().BeOfType<ObservableCollection<Friend>>();
         }
     }
 }

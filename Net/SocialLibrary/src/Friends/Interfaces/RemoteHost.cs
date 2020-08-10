@@ -1,7 +1,7 @@
 using Social.Friends; 
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 public interface RemoteHost
 {
-    List<Friend> Friends { get; } 
+    ObservableCollection<Friend> Friends { get; }
 }
