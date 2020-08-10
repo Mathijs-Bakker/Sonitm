@@ -31,20 +31,4 @@ namespace FriendsTests
             sut.Id.Should().Be(1);
         }
     }
-    
-    public interface IRemoteHost
-    {
-        List<Friend> FriendsList { get; }
-    }
-
-    public class RemoteHost : IRemoteHost
-    {
-        public RemoteHost()
-        {
-            FriendsList = list;
-        }
-        
-        private List<Friend> list = new List<Friend>();
-        public List<Friend> FriendsList { get; private set; }
-    }
-}
+}    
