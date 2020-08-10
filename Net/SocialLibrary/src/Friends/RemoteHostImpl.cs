@@ -1,7 +1,10 @@
 using System.Collections.Generic;
-using Social.Friends;
 
-public class RemoteHostImpl : RemoteHost
+namespace Social.Friends
 {
-   public List<Friend> Friends { get; set; } 
+    public class RemoteHostImpl : RemoteHost
+    {
+        public List<Friend> Friends { get; set; } 
+    }
 }
+
