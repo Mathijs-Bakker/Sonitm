@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Friends", "Friends\Friends.csproj", "{D2E3C63F-7791-4D9F-9B6F-F9410A98B6DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Friends", "src\Friends\Friends.csproj", "{D2E3C63F-7791-4D9F-9B6F-F9410A98B6DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendsTests", "FriendsTests\FriendsTests.csproj", "{07FC1353-CB29-414A-A4BF-D3CC01AFF110}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FriendsTests", "tests\FriendsTests\FriendsTests.csproj", "{07FC1353-CB29-414A-A4BF-D3CC01AFF110}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

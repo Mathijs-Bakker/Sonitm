@@ -1,8 +1,0 @@
-/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/bin/Debug/netcoreapp3.1/Friends.deps.json
-/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/bin/Debug/netcoreapp3.1/Friends.dll
-/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/bin/Debug/netcoreapp3.1/Friends.pdb
-/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/obj/Debug/netcoreapp3.1/Friends.csprojAssemblyReference.cache
-/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/obj/Debug/netcoreapp3.1/Friends.AssemblyInfoInputs.cache
-/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/obj/Debug/netcoreapp3.1/Friends.AssemblyInfo.cs
-/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/obj/Debug/netcoreapp3.1/Friends.dll
-/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/obj/Debug/netcoreapp3.1/Friends.pdb
