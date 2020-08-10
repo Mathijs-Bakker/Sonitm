@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/FriendsTests.csproj",
+    "projectUniqueName": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/tests/FriendsTests/FriendsTests.csproj",
     "projectName": "FriendsTests",
-    "projectPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/FriendsTests.csproj",
-    "outputPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/obj/",
+    "projectPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/tests/FriendsTests/FriendsTests.csproj",
+    "outputPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/tests/FriendsTests/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -18,8 +18,8 @@
     "frameworks": {
       "netcoreapp3.1": {
         "projectReferences": {
-          "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/Friends.csproj": {
-            "projectPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/Friends.csproj"
+          "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/src/Friends/Friends.csproj": {
+            "projectPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/src/Friends/Friends.csproj"
           }
         }
       }
