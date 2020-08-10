@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/Friends.csproj",
+    "projectUniqueName": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/src/Friends/Friends.csproj",
     "projectName": "Friends",
-    "projectPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/Friends.csproj",
-    "outputPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/obj/",
+    "projectPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/src/Friends/Friends.csproj",
+    "outputPath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/src/Friends/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

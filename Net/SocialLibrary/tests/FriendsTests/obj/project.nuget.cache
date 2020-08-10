@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bmxtTQmLt+qjlfkfED/qWpiVSb2tralsBOfx+TGixuwoZ+QvKy2HWcf6m/PHRdkO8KCSElqPklJQqxwPptp/XA==",
+  "dgSpecHash": "gbZ0qlv1gQn2CqNVtkJ96NLd8oSU5uRnlf34gPlBzgnDUtMYz5IuKpL80/UL0uiGCmQnueRHKXrZMIuUdW8CKQ==",
   "success": true,
-  "projectFilePath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/FriendsTests/FriendsTests.csproj",
+  "projectFilePath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/tests/FriendsTests/FriendsTests.csproj",
   "expectedPackageFiles": [
     "/Users/MateoPanadero/.nuget/packages/castle.core/4.4.0/castle.core.4.4.0.nupkg.sha512",
     "/Users/MateoPanadero/.nuget/packages/fluentassertions/6.0.0-alpha0001/fluentassertions.6.0.0-alpha0001.nupkg.sha512",

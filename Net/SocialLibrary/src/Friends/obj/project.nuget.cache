@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2uHwcl3VUVpkjR0xMpXkaz4g52p5JToB9+rKdIG371IZ4Aj58nNWnnBmOF7ntzQsWlWxlAu0u7/Nj2+aoATI8w==",
+  "dgSpecHash": "GDwidASJT9Qqp8+NWvTFUYjZPhX8T8JgynIP/U0gZfWaasa/rRmQsF931w+PfUXVmQ0EKVfXLPQQT6sjLXbirA==",
   "success": true,
-  "projectFilePath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/Friends/Friends.csproj",
+  "projectFilePath": "/Users/MateoPanadero/Repositories/Sonitm/Net/SocialLibrary/src/Friends/Friends.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

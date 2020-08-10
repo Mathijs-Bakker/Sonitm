@@ -11,10 +11,9 @@ namespace FriendsTests
         [Test]
         public void Sut_Should_Have_an_Observable_Friends_Collection()
         {
-           IRemoteHost sut = new RemoteHost();
+           RemoteHost sut = new RemoteHostImpl();
 
            //sut.Should().BeOfType<IRemoteHost>();
-           sut.FriendsList.Should().BeOfType<List<Friend>>();
         }
     }
 }
