@@ -58,19 +58,21 @@ namespace FriendsTests
         }
         
         [Test]
-        public void When_The_OnlineStatus_Of_A_Friend_Changes___Friends_Should_Be_Updated()
+        public void When_FriendsCollectionChanged___Update_Should_BeCalled()
         {
+
             _sut.Update();
             
-            _sut.List.Add(
+            _remoteHost.Friends.Add(
                 new FriendBuilder()
                     .WithId(1)
                     .WithName("a")
                     .WithOnlineStatus(false)
-                    .WithLastSeen(new DateTime(2008, 1, 2))
+                    .WithLastSeen(new DateTime(0001, 1, 1))
                     .WithLevel(1)
                     .Build()
                 );
+            
         }
 
     }
