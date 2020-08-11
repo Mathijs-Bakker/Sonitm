@@ -1,7 +1,6 @@
 using NUnit.Framework;
 using FluentAssertions;
 using Social.Friends;
-using System;
 
 namespace FriendsTests
 {
