@@ -78,5 +78,12 @@ namespace FriendsTests
             sortedByDateTime.Should().BeInAscendingOrder(friend => friend.LastSeen);
         }
 
+        [Test]
+        public void SortByLevel_Should_Sort_Friends_By_LastSeen()
+        {
+            var sortedByLevel = _sut.SortByName(_friends);
+            sortedByLevel.Should().BeInAscendingOrder(friend => friend.Level);
+        }
+
     }
 }

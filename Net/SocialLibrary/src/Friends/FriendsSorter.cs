@@ -24,5 +24,11 @@ namespace Social.Friends
             _sortedList = friends.OrderBy(x => x.LastSeen).ToList();
             return _sortedList;
         }
+        
+        public List<Friend> SortByLevel(List<Friend> friends)
+        {
+            _sortedList = friends.OrderBy(x => x.Level).ToList();
+            return _sortedList;
+        }
     }
 }
