@@ -70,5 +70,13 @@ namespace FriendsTests
             var sortedByOnlineStatus = _sut.SortByOnlineStatus(_friends);
             sortedByOnlineStatus.Should().BeInAscendingOrder(friend => friend.IsOnline);
         }
+
+        [Test]
+        public void SortByLastSeen_Should_Sort_Friends_By_LastSeen()
+        {
+            var sortedByDateTime = _sut.SortByName(_friends);
+            sortedByDateTime.Should().BeInAscendingOrder(friend => friend.LastSeen);
+        }
+
     }
 }
