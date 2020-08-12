@@ -48,8 +48,6 @@ namespace FriendsTests
         public void SetUp()
         {
             _sut = new FriendsSorter();
-
-
         }
 
         [Test]
@@ -60,11 +58,17 @@ namespace FriendsTests
         }
 
         [Test]
-        public void SortByName_Should_Sort_By_Name_Ascending()
+        public void SortByName_Should_Sort_Friends_By_Name_Ascending()
         {
             var sortedFriends = _sut.SortByName(_friends);
             sortedFriends.Should().BeInAscendingOrder(friend => friend.Name);
         }
 
+        [Test]
+        public void SortByOnlineStatus_Should_Sort_Friends_By_OnlineStatus()
+        {
+            var sortedByOnlineStatus = _sut.SortByOnlineStatus(_friends);
+            sortedByOnlineStatus.Should().BeInAscendingOrder(friend => friend.IsOnline);
+        }
     }
 }

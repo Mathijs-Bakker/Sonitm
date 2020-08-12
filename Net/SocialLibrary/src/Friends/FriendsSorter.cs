@@ -12,5 +12,11 @@ namespace Social.Friends
             _sortedList = friends.OrderBy(x => x.Name).ToList();
             return _sortedList;
         }
+        
+        public List<Friend> SortByOnlineStatus(List<Friend> friends)
+        {
+            _sortedList = friends.OrderBy(x => x.IsOnline).ToList();
+            return _sortedList;
+        }
     }
 }
