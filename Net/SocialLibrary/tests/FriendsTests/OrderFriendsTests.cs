@@ -6,10 +6,8 @@ using System.Collections.Generic;
 
 namespace FriendsTests
 {
-    public class FriendsSorterTests
+    public class OrderFriendsTests
     {
-        OrderFriends _sut;
-
         List<Friend> _friends = new List<Friend>(){
                 new FriendBuilder()
                     .WithId(4)
@@ -44,47 +42,41 @@ namespace FriendsTests
                     .Build()
                 };
 
-        [SetUp]
-        public void SetUp()
-        {
-            _sut = new OrderFriends();
-        }
-
         [Test]
         public void SortMethods_Should_Take_And_Return_A_List_of_Friends()
         {
-            _sut.SortByName(new List<Friend>()).Should().BeOfType<List<Friend>>();
-            _sut.SortByOnlineStatus(new List<Friend>()).Should().BeOfType<List<Friend>>();
-            _sut.SortByLastSeen(new List<Friend>()).Should().BeOfType<List<Friend>>();
-            _sut.SortByLevel(new List<Friend>()).Should().BeOfType<List<Friend>>();
+            OrderFriends.ByName(new List<Friend>()).Should().BeOfType<List<Friend>>();
+            OrderFriends.ByOnlineStatus(new List<Friend>()).Should().BeOfType<List<Friend>>();
+            OrderFriends.ByLastSeen(new List<Friend>()).Should().BeOfType<List<Friend>>();
+            OrderFriends.ByLevel(new List<Friend>()).Should().BeOfType<List<Friend>>();
         }
 
         [Test]
         public void SortByName_Should_Sort_Friends_By_Name_Ascending()
         {
-            var sortedFriends = _sut.SortByName(_friends);
-            sortedFriends.Should().BeInAscendingOrder(friend => friend.Name);
+            var newFriendsOrder = OrderFriends.ByName(_friends);
+            newFriendsOrder.Should().BeInAscendingOrder(friend => friend.Name);
         }
 
         [Test]
         public void SortByOnlineStatus_Should_Sort_Friends_By_OnlineStatus()
         {
-            var sortedByOnlineStatus = _sut.SortByOnlineStatus(_friends);
-            sortedByOnlineStatus.Should().BeInAscendingOrder(friend => friend.IsOnline);
+            var newFriendsOrder = OrderFriends.ByOnlineStatus(_friends);
+            newFriendsOrder.Should().BeInAscendingOrder(friend => friend.IsOnline);
         }
 
         [Test]
         public void SortByLastSeen_Should_Sort_Friends_By_LastSeen()
         {
-            var sortedByDateTime = _sut.SortByName(_friends);
-            sortedByDateTime.Should().BeInAscendingOrder(friend => friend.LastSeen);
+            var newFriendsOrder= OrderFriends.ByName(_friends);
+            newFriendsOrder.Should().BeInAscendingOrder(friend => friend.LastSeen);
         }
 
         [Test]
         public void SortByLevel_Should_Sort_Friends_By_LastSeen()
         {
-            var sortedByLevel = _sut.SortByName(_friends);
-            sortedByLevel.Should().BeInAscendingOrder(friend => friend.Level);
+            var newFriendsOrder = OrderFriends.ByName(_friends);
+            newFriendsOrder.Should().BeInAscendingOrder(friend => friend.Level);
         }
 
     }
