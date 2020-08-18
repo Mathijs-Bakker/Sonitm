@@ -8,7 +8,7 @@ namespace FriendsTests
 {
     public class FriendsSorterTests
     {
-        FriendsSorter _sut;
+        OrderFriends _sut;
 
         List<Friend> _friends = new List<Friend>(){
                 new FriendBuilder()
@@ -47,14 +47,16 @@ namespace FriendsTests
         [SetUp]
         public void SetUp()
         {
-            _sut = new FriendsSorter();
+            _sut = new OrderFriends();
         }
 
         [Test]
-        public void SortByName_Should_Take_And_Return_A_List_of_Friends()
+        public void SortMethods_Should_Take_And_Return_A_List_of_Friends()
         {
-            var list = _sut.SortByName(new List<Friend>());
-            list.Should().BeOfType<List<Friend>>();
+            _sut.SortByName(new List<Friend>()).Should().BeOfType<List<Friend>>();
+            _sut.SortByOnlineStatus(new List<Friend>()).Should().BeOfType<List<Friend>>();
+            _sut.SortByLastSeen(new List<Friend>()).Should().BeOfType<List<Friend>>();
+            _sut.SortByLevel(new List<Friend>()).Should().BeOfType<List<Friend>>();
         }
 
         [Test]
