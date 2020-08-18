@@ -9,26 +9,22 @@ namespace Social.Friends
 
         public static List<Friend> ByName(this List<Friend> friends)
         {
-            _sortedList = friends.OrderBy(x => x.Name).ToList();
-            return _sortedList;
+            return friends.OrderBy(x => x.Name).ToList();
         }
         
         public static List<Friend> ByOnlineStatus(List<Friend> friends)
         {
-            _sortedList = friends.OrderBy(x => x.IsOnline).ToList();
-            return _sortedList;
+            return friends.OrderBy(x => x.IsOnline).ToList();
         }
         
         public static List<Friend> ByLastSeen(List<Friend> friends)
         {
-            _sortedList = friends.OrderBy(x => x.LastSeen).ToList();
-            return _sortedList;
+            return friends.OrderBy(x => x.LastSeen).ToList();
         }
         
         public static List<Friend> ByLevel(List<Friend> friends)
         {
-            _sortedList = friends.OrderBy(x => x.Level).ToList();
-            return _sortedList;
+            return friends.OrderBy(x => x.Level).ToList();
         }
     }
 }
