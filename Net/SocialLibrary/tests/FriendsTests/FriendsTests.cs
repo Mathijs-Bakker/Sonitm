@@ -1,42 +1,80 @@
 using System.Collections.Generic;
 using NUnit.Framework;
+using NSubstitute;
 using FluentAssertions;
 using Social.Friends;
 using System;
+using System.Collections.ObjectModel;
 
 namespace FriendsTests
 {
     [TestFixture]
     public class FriendsTests
     {
-        [Test]
-        public void Sut_Should_BeOfType_Friends()
+        Friends _sut;
+
+        RemoteHost _remoteHost;
+        ObservableCollection<Friend> _observableFriends; 
+
+        [SetUp]
+        public void SetUp()
         {
-            var sut = new Friends();
-            sut.Should().BeOfType<Friends>();
+            
+            _remoteHost = Substitute.For<RemoteHost>();
+
+            _sut = new Friends(_remoteHost);
+
+            _observableFriends = new ObservableCollection<Friend>();
+            _observableFriends.Add(
+                    new FriendBuilder()
+                        .WithId(0)
+                        .WithName("")
+                        .WithOnlineStatus(false)
+                        .WithLastSeen(new DateTime(0001, 1, 1))
+                        .WithLevel(0)
+                        .Build()
+                    );
+             
+            _remoteHost.Friends.Returns(_observableFriends);
         }
-        
+
         [Test]
         public void Friends_Listing_Should_BeOFType_ListFriend()
         {
-            var sut = new Friends();
-            sut.List.Should().BeOfType<List<Friend>>();
+            _sut.List.Should().BeOfType<List<Friend>>();
         }         
+       
+        [Test]
+        public void When_Sut_Is_Instantiated___List_Should_Count_0()
+        {
+            _sut.List.Count.Should().Be(0);
+        }
 
         [Test]
-        public void Update_Should_()
+        public void When_Calling_Update___List_Should_Have_One_Entry()
         {
-            var sut = new Friends();
-            sut.List.Add(
+            _sut.Update();
+            _sut.List.Count.Should().Be(1);
+        }
+        
+        [Test]
+        public void When_FriendsCollectionChanged___Update_Should_BeCalled()
+        {
+
+            _sut.Update();
+            
+            _remoteHost.Friends.Add(
                 new FriendBuilder()
                     .WithId(1)
                     .WithName("a")
                     .WithOnlineStatus(false)
-                    .WithLastSeen(new DateTime(2008, 12, 2))
+                    .WithLastSeen(new DateTime(0001, 1, 1))
                     .WithLevel(1)
                     .Build()
                 );
+            
         }
+
     }
 
     public class FriendBuilder

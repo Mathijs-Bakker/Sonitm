@@ -1,4 +1,5 @@
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 
 namespace Social.Friends
 {
@@ -9,7 +10,10 @@ namespace Social.Friends
         public RemoteHostImpl()
         {
             Friends = new ObservableCollection<Friend>();
+            //Friends.CollectionChanged += FriendsCollectionChanged;
         }
+
+        public void FriendsCollectionChanged(object sender, NotifyCollectionChangedEventArgs e){}
     }
 }
 
