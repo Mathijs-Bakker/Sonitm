@@ -43,7 +43,7 @@ namespace FriendsTests
                 };
 
         [Test]
-        public void SortMethods_Should_Take_And_Return_A_List_of_Friends()
+        public void OrderByMethods_Should_Take_And_Return_A_List_of_Friends()
         {
             OrderFriends.ByName(new List<Friend>()).Should().BeOfType<List<Friend>>();
             OrderFriends.ByOnlineStatus(new List<Friend>()).Should().BeOfType<List<Friend>>();
@@ -79,5 +79,10 @@ namespace FriendsTests
             newFriendsOrder.Should().BeInAscendingOrder(friend => friend.Level);
         }
 
+        [Test]
+        public void Foo()
+        {
+            var list = OrderFriends.ByName(_friends).ByOnlineStatus();
+        }
     }
 }
