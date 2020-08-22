@@ -9,7 +9,7 @@ namespace Social.Friends
         {
             return friends.OrderBy(x => x.Name).ToList();
         }
-        
+
         public static List<Friend> ByOnlineStatus(this List<Friend> friends)
         {
             return friends.OrderBy(x => x.IsOnline).ToList();
@@ -17,7 +17,7 @@ namespace Social.Friends
         
         public static List<Friend> ByLastSeen(this List<Friend> friends)
         {
-            return friends.OrderBy(x => x.LastSeen).ToList();
+           return friends.OrderBy(x => x.LastSeen).ToList();
         }
         
         public static List<Friend> ByLevel(this List<Friend> friends)

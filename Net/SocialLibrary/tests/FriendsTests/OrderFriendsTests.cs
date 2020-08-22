@@ -13,8 +13,8 @@ namespace FriendsTests
                     .WithId(4)
                     .WithName("c")
                     .WithOnlineStatus(false)
-                    .WithLastSeen(new DateTime(0001, 1, 1))
-                    .WithLevel(0)
+                    .WithLastSeen(new DateTime(0001, 1, 4))
+                    .WithLevel(2)
                     .Build(),
 
                 new FriendBuilder()
@@ -22,23 +22,23 @@ namespace FriendsTests
                     .WithName("b")
                     .WithOnlineStatus(false)
                     .WithLastSeen(new DateTime(0001, 1, 1))
-                    .WithLevel(0)
+                    .WithLevel(1)
                     .Build(),
 
                 new FriendBuilder()
                     .WithId(3)
                     .WithName("d")
                     .WithOnlineStatus(false)
-                    .WithLastSeen(new DateTime(0001, 1, 1))
-                    .WithLevel(0)
+                    .WithLastSeen(new DateTime(0001, 1, 2))
+                    .WithLevel(4)
                     .Build(),
 
                 new FriendBuilder()
                     .WithId(2)
                     .WithName("a")
                     .WithOnlineStatus(false)
-                    .WithLastSeen(new DateTime(0001, 1, 1))
-                    .WithLevel(0)
+                    .WithLastSeen(new DateTime(0001, 1, 3))
+                    .WithLevel(3)
                     .Build()
                 };
 
@@ -68,14 +68,14 @@ namespace FriendsTests
         [Test]
         public void SortByLastSeen_Should_Sort_Friends_By_LastSeen()
         {
-            var newFriendsOrder= OrderFriends.ByName(_friends);
+            var newFriendsOrder= OrderFriends.ByLastSeen(_friends);
             newFriendsOrder.Should().BeInAscendingOrder(friend => friend.LastSeen);
         }
 
         [Test]
-        public void SortByLevel_Should_Sort_Friends_By_LastSeen()
+        public void SortByLevel_Should_Sort_Friends_By_Level()
         {
-            var newFriendsOrder = OrderFriends.ByName(_friends);
+            var newFriendsOrder = OrderFriends.ByLevel(_friends);
             newFriendsOrder.Should().BeInAscendingOrder(friend => friend.Level);
         }
 
@@ -83,6 +83,8 @@ namespace FriendsTests
         public void Foo()
         {
             var list = OrderFriends.ByName(_friends).ByOnlineStatus();
+            list.Should().BeInAscendingOrder(f => f.Name)
+                    .And.BeInAscendingOrder(f => f.IsOnline);
         }
     }
 }
