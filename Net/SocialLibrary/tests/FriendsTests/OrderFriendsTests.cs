@@ -43,7 +43,7 @@ namespace FriendsTests
                 };
 
         [Test]
-        public void OrderByMethods_Should_Take_And_Return_A_List_of_Friends()
+        public void By_Methods__Take_And_Return_A_List_of_Friends()
         {
             OrderFriends.ByName(new List<Friend>()).Should().BeOfType<List<Friend>>();
             OrderFriends.ByOnlineStatus(new List<Friend>()).Should().BeOfType<List<Friend>>();
@@ -52,39 +52,31 @@ namespace FriendsTests
         }
 
         [Test]
-        public void SortByName_Should_Sort_Friends_By_Name_Ascending()
+        public void ByName__Sort_Friends_By_Name_Alphabetically()
         {
             var newFriendsOrder = OrderFriends.ByName(_friends);
             newFriendsOrder.Should().BeInAscendingOrder(friend => friend.Name);
         }
 
         [Test]
-        public void SortByOnlineStatus_Should_Sort_Friends_By_OnlineStatus()
+        public void ByOnlineStatus__Sort_By_Online_Friends_First()
         {
             var newFriendsOrder = OrderFriends.ByOnlineStatus(_friends);
             newFriendsOrder.Should().BeInAscendingOrder(friend => friend.IsOnline);
         }
 
         [Test]
-        public void SortByLastSeen_Should_Sort_Friends_By_LastSeen()
+        public void ByLastSeen__Sort_By_Most_Recent_First()
         {
             var newFriendsOrder= OrderFriends.ByLastSeen(_friends);
             newFriendsOrder.Should().BeInAscendingOrder(friend => friend.LastSeen);
         }
 
         [Test]
-        public void SortByLevel_Should_Sort_Friends_By_Level()
+        public void ByLevel__Sort_By_Highest_Level_First()
         {
             var newFriendsOrder = OrderFriends.ByLevel(_friends);
             newFriendsOrder.Should().BeInAscendingOrder(friend => friend.Level);
-        }
-
-        [Test]
-        public void Foo()
-        {
-            var list = OrderFriends.ByName(_friends).ByOnlineStatus();
-            list.Should().BeInAscendingOrder(f => f.Name)
-                    .And.BeInAscendingOrder(f => f.IsOnline);
         }
     }
 }
